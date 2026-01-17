@@ -1,1 +1,275 @@
-launch
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WAIP Assignment 1 - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <style>
+        /* base styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #111 100%);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow-x: hidden;
+            overflow-y: auto; 
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: left; 
+        }
+
+        
+        .profile-photo {
+            width: 160px;
+            height: 210px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+       
+        .jump-link {
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            text-decoration: underline;
+            margin-bottom: 30px;
+            display: inline-block;
+            transition: color 0.2s ease;
+        }
+
+        .jump-link:hover {
+            color: white;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+        }
+
+        /* trasnferred from main niquegraph.com CSS */
+        .technical-section {
+            backdrop-filter: blur(8px) saturate(160%);
+            -webkit-backdrop-filter: blur(8px) saturate(160%);
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 50px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            scroll-margin-top: 20px;
+        }
+
+        .italic-grey {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: white;
+        }
+
+        .item-title {
+            font-weight: 700;
+            display: block;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .tech-detail {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+
+        .download-btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #111;
+            padding: 14px 28px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-top: 40px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .download-btn:hover {
+            transform: scale(1.03);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        
+        footer {
+            margin-top: 60px;
+            padding-bottom: 40px;
+            text-align: center; 
+            width: 100%;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: underline;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* mobile adjustments */
+        @media (max-width: 600px) {
+            body { font-size: 0.85rem; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.05rem; }
+            .intro-text { font-size: 0.9rem; }
+            .item-title { font-size: 0.95rem; }
+            .technical-section { padding: 25px; }
+            .container { padding: 20px 15px; }
+            .jump-link { font-size: 0.75rem; }
+            .download-btn { font-size: 0.75rem; padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="IMG_5807.JPG" alt="Nik Iman Portrait" class="profile-photo">
+
+    <h1>Hi there, Nik Iman here 👋</h1>
+
+    <a href="#technical" class="jump-link">I don't want to read all of this, jump to the technical part</a>
+
+    <div class="intro-text">
+        <p>
+            I’m an Information Systems student in 1st year and 2nd semester at UTP! Allora, here is my cv, for WAIP assignment 1 purposes.
+            <br><br>
+            My hobby is… i don’t really know how to say it. I guess, appreciating and being grateful for everything in life? I love many things, watching movie/tv shows, reading articles, watching the news, watching video essays on youtube that touch about various topics like geopolitics, urbanism, history, technology. oh, i also love watching vlogs, be it travel vlogs, daily vlogs, family vlogs. they help expand my perspective on the world from the comfort of my couch. and also, help me build my character and navigate the scary world of socializing :p. I also love to romanticize arts in all form from fine art to architecture to.. UI building.
+            <br><br>
+            Anyway, i know this is not really a CV if im talking about myself in long text like this. If im applying a job, id be getting rejected pretty easily right. What company wants to know someone’s personality?? They just wanna know our technical strengths because we are just work machines to bring profit to the company, haha. But, this is not a job application and just a WAIP assignment, so why not I tell myself so my lecturer can know me. Especially, i also love writing!
+        </p>
+
+        <p>
+            Allora, you might have noticed that I’m hosting this website from my own domain! <strong>niquegraph.com!</strong> Yes, i have my own domain :D it’s for my design & production firm, which.. i have yet to launch (i do graphic designing and media production too!) (pray for me). Oh, and funny backstory too, i need to do this whole assignment on my iPad because windows is acting up on my pc. yeah. But, luckily it’s HTML! this is why i love html. i can just build this website using online html editor hehe. (vscode.dev) And yea, by the looks of it, you have probably realized that I already have a background in web development. I learned all of this by my own, so, i’m excited to finally learn web development with a proper guidance! (i hope UTP course outline is intereting enough for this subject please).
+        </p>
+    </div>
+
+    <div id="technical" class="technical-section">
+        <span class="italic-grey">Enough talking, here’s the technical</span>
+
+        <h2>Education</h2>
+        <span class="item-title">Universiti Teknologi PETRONAS</span>
+        <span class="date">September 2024 - August 2025</span>
+        <p class="tech-detail">Foundation of Business Management and Computing (Information Systems specialization). Achieved a CGPA of 3.72 (First Class Award).</p>
+
+        <span class="item-title">Sekolah Menengah Kebangsaan Serendah</span>
+        <span class="date">January 2020 - February 2024</span>
+        <p class="tech-detail">SPM Science stream: Achieved 6A (3A+, 1A, 2A-) and 3B (2B+, 1B).</p>
+
+        <h2>Leadership Experience</h2>
+        <span class="item-title">SMKS Editorial Board – Chief Editor</span>
+        <span class="date">March 2023 - February 2024</span>
+        <ul>
+            <li>Arranged board annual strategy and revived the school's yearly magazine.</li>
+            <li>Introduced photo booths at events, increasing profits by 300%.</li>
+            <li>Automated 90% of workflow using Google Apps Script.</li>
+        </ul>
+
+        <span class="item-title">OH MY CODE Competition: GoodFinds – CEO</span>
+        <span class="date">May 2025 - August 2025</span>
+        <ul>
+            <li>Laid technical groundwork using VB.Net, Node JS, and JavaScript.</li>
+            <li>Managed backend and frontend teams via GitHub.</li>
+        </ul>
+
+        <span class="item-title">Teen Green Squad – Head of Media Department</span>
+        <span class="date">September 2024 - December 2024</span>
+        <ul>
+            <li>Coordinated media and technical flow-of-event for CSR kindergarten restoration.</li>
+            <li>Designed squad promotional materials and served as lead videographer.</li>
+        </ul>
+
+        <h2>Skills & Projects</h2>
+        <p class="tech-detail"><strong>Programming:</strong> Python, VB.Net, JavaScript, Node JS, HTML.</p>
+        <p class="tech-detail"><strong>Software:</strong> Inkscape, Adobe Lightroom, Adobe AfterEffects, DaVinci Resolve, VS Code, Home Assistant IO.</p>
+        <p class="tech-detail"><strong>Key Project:</strong> <strong>niquegraph</strong> – An ongoing personal project combining graphic design, arts, and technology.</p>
+
+        <h2>Awards</h2>
+        <ul>
+            <li>First Class Award (Foundation CGPA 3.72) at UTP.</li>
+            <li>Excellent Extracurricular Award 2024 at SMK Serendah.</li>
+            <li>Academic Icon Award (English) 2022 at SMK Serendah.</li>
+        </ul>
+
+        <a href="ResumeNikImanSept2025.pdf" class="download-btn" download>Download PDF</a>
+    </div>
+
+    <footer>
+        <a href="https://niquegraph.com" class="footer-link">Go back to home</a>
+    </footer>
+</div>
+
+</body>
+</html>
